@@ -1,14 +1,14 @@
-- name: Lesson12
+- name: my-site
   gather_facts: false
   hosts: [all]
   become: yes
 
   tasks:
 
-    - name: Create lesson12
+    - name: Create my-site
       docker_container:
-        name: lesson12
-        image: mdsn/lesson12app1
+        name: my-site
+        image: rkiryushkkin/my-site
         pull: true
         state: started
         ports:
