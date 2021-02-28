@@ -38,17 +38,14 @@ jobs:
             host=${host//'ec2_endpoint = "'}
             host=${host//'"'}
             sed -i 's/localhost/${host}:8080/g' config.toml 
-            echo "-------"
-            
-            cat config.toml
 
-      # -
-      #   name: Build and push
-      #   id: docker_build
-      #   uses: docker/build-push-action@v2
-      #   with:
-      #     push: true
-      #     tags: ${{ secrets.DOCKER_REGISTRY }}/${{ secrets.DOCKER_REPOSITORY }}:latest
+      -
+        name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: ${{ secrets.DOCKER_REGISTRY }}/${{ secrets.DOCKER_REPOSITORY }}:latest
 
           
       -   

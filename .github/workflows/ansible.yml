@@ -38,8 +38,7 @@ jobs:
             host=$(grep "ec2_endpoint" terraform.log | awk -F  ":" '{print $1}' )
             host=${host//'ec2_endpoint = "'}
             host=${host//'"'}
-            echo $host >> ansible/hosts
-            sed 's/localhost/$host:8080/g' config.toml 
+            echo $host >> ansible/hosts 
             echo "$SSH" > ansible/key.pem
             chmod 400 ansible/key.pem
             cat ansible/key.pem
