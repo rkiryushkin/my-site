@@ -21,6 +21,13 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
+      - name: Change IP
+        id: change_ip
+        run: |
+            host=$(grep "ec2_endpoint" terraform.log | awk -F  ":" '{print $1}' )
+            host=${host//'ec2_endpoint = "'}
+            host=${host//'"'}
+            sed 's/localhost/$host:8080/g' config.toml 
 
       -
         name: Build and push
@@ -34,6 +41,8 @@ jobs:
       -   
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+
+
 
 
         
