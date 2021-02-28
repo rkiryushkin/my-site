@@ -29,7 +29,9 @@ jobs:
         with:
           push: true
           tags: rkiryushkkin/my-site:latest
-         
+
+          
+      -   
         name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
 
