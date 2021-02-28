@@ -22,22 +22,23 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Download artifact
-        uses: dawidd6/action-download-artifact@v2
-        with:
-          github_token: ${{secrets.GITTOKEN}}
-          workflow: terrafrom.yml
-          workflow_conclusion: success
-          name: terraform
-          repo: rkiryushkin/final
+      # - name: Download artifact
+      #   uses: dawidd6/action-download-artifact@v2
+      #   with:
+      #     github_token: ${{secrets.GITTOKEN}}
+      #     workflow: terrafrom.yml
+      #     workflow_conclusion: success
+      #     name: terraform
+      #     repo: rkiryushkin/final
 
-      - name: Change IP
-        id: change_ip
-        run: |
-            host=$(grep "ec2_endpoint" terraform.log | awk -F  ":" '{print $1}' )
-            host=${host//'ec2_endpoint = "'}
-            host=${host//'"'}
-            sed -i 's/localhost/${host}:8080/g' config.toml 
+      # - name: Change IP
+      #   id: change_ip
+      #   run: |
+      #       host=$(grep "ec2_endpoint" terraform.log | awk -F  ":" '{print $1}' )
+      #       host=${host//'ec2_endpoint = "'}
+      #       host=${host//'"'}
+      #       sed -i 's/localhost/${host}:8080/g' config.toml
+      #       cat config.toml
 
       -
         name: Build and push
