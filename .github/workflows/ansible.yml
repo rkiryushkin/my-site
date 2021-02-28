@@ -39,7 +39,7 @@ jobs:
             host=${host//'ec2_endpoint = "'}
             host=${host//'"'}
             echo $host >> ansible/hosts
-            #sed 's/localhost/$host:8080/g' config.toml 
+            sed 's/localhost/$host:8080/g' config.toml 
             echo "$SSH" > ansible/key.pem
             chmod 400 ansible/key.pem
             cat ansible/key.pem
