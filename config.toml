@@ -1,4 +1,4 @@
-baseURL = "http://127.0.0.1:8080/"
+baseURL = " 3.127.236.8:8080"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "beautifulhugo"
