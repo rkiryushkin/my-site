@@ -12,4 +12,4 @@
         pull: true
         state: started
         ports:
-          - "8000:80"
+          - "80:80"
