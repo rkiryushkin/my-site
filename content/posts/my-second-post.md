@@ -1,6 +1,6 @@
 ---
 title: "What is DevOps?"
-date: 2021-03-01T18:45:23+02:00
+date: 2021-03-01T19:45:23+02:00
 draft: true
 ---
 
