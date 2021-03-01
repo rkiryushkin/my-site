@@ -9,8 +9,8 @@ DevOps (a portmanteau of “development” and “operations”) is the combinat
 In simple terms, DevOps is about removing the barriers between traditionally siloed teams, development and operations. Under a DevOps model, development and operations teams work together across the entire software application life cycle, from development and test through deployment to operations.
 
 Benefits of DevOps
-Speed. DevOps practices let you move at the velocity you need to innovate faster, adapt to changing markets better, and become more efficient at driving business results.
-Rapid delivery. When you increase the pace of releases, you can improve your product faster and build competitive advantage.
-Reliability. DevOps practices like continuous integration and continuous delivery can ensure the quality of application updates and infrastructure changes so you can reliably deliver at a more rapid pace while maintaining an optimum experience for end users.
-Improved collaboration. Under a DevOps model, developers and operations teams collaborate closely, share responsibilities, and combine their workflows. This reduces inefficiencies and saves time.
-Security. You can adopt a DevOps model without sacrificing security by using automated, integrated security testing tools.
+1) Speed. DevOps practices let you move at the velocity you need to innovate faster, adapt to changing markets better, and become more efficient at driving business results.
+2) Rapid delivery. When you increase the pace of releases, you can improve your product faster and build competitive advantage.
+3) Reliability. DevOps practices like continuous integration and continuous delivery can ensure the quality of application updates and infrastructure changes so you can reliably deliver at a more rapid pace while maintaining an optimum experience for end users.
+4) Improved collaboration. Under a DevOps model, developers and operations teams collaborate closely, share responsibilities, and combine their workflows. This reduces inefficiencies and saves time.
+5) Security. You can adopt a DevOps model without sacrificing security by using automated, integrated security testing tools.
